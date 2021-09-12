@@ -1,0 +1,7 @@
+syntax = "proto3";
+message TestWrapper {
+  TestInner inner = 1;
+}
+message TestInner {
+  int64 data = 1;
+}

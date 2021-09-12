@@ -1,0 +1,23 @@
+syntax = "proto3";
+package test;
+message TestOneof {
+  oneof MyOneof_1 {
+    Oneof_1 v1 = 1;
+    Oneof_2 v2 = 2;
+    Oneof_3 v3 = 3;
+  }
+  oneof MyOneof_2 {
+    Oneof_1 v1 = 4;
+    Oneof_2 v2 = 5;
+    Oneof_3 v3 = 6;
+  }
+}
+message Oneof_1 {
+  string value = 1;
+}
+message Oneof_2 {
+  int64 value = 1;
+}
+message Oneof_3 {
+  map<string, int64> value = 1;
+}
